@@ -1,11 +1,16 @@
 class Robot
+  attr_reader :on_board
 
   # create a robot
   def initialize
+    @on_board = false
+    @board = Board.new
+    @directions = ['NORTH', 'EAST', 'SOUTH', 'WEST']
   end
 
   # place the robot on the board
-  def place
+  def place(x, y, facing)
+    @on_board = @board.is_within_board(x, y) && @directions.include?(facing)
   end
 
   # move the robot 1 space in its current direction
