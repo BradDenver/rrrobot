@@ -63,4 +63,38 @@ RSpec.describe Robot do
     end
   end
 
+  describe "#left" do
+    before :each do
+      @robot = Robot.new
+    end
+    context "when not yet placed" do
+      it "should ignore left" do
+        expect{@robot.left}.to output("I am not on the board yet Dave\n").to_stdout
+      end
+    end
+    context "when placed on board" do
+      it "should face new direction" do
+        @robot.place(0, 0, 'NORTH')
+        expect{@robot.left}.to output("Facing WEST\n").to_stdout
+      end
+    end
+  end
+
+  describe "#right" do
+    before :each do
+      @robot = Robot.new
+    end
+    context "when not yet placed" do
+      it "should ignore right" do
+        expect{@robot.right}.to output("I am not on the board yet Dave\n").to_stdout
+      end
+    end
+    context "when placed on board" do
+      it "should face new direction" do
+        @robot.place(0, 0, 'NORTH')
+        expect{@robot.right}.to output("Facing EAST\n").to_stdout
+      end
+    end
+  end
+
 end
