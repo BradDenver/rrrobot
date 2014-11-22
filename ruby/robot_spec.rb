@@ -16,17 +16,32 @@ RSpec.describe Robot do
   end
   
   describe "#place(x, y, facing)" do
-    before :all do
-      @robot = Robot.new
-    end
     context "when given valid placement" do
       before :all do
+        @robot = Robot.new
         @robot.place(0, 2, 'NORTH')
       end
       it "should be on the board" do
         expect(@robot.on_board).to be true
       end
+      it "should be report the correct placement" do
+        expect{@robot.report}.to output("I am at 0:2, facing NORTH\n").to_stdout
+      end
     end
+    context "when given an invalid placement" do
+      before :all do
+        @robot = Robot.new
+        @robot.place(0, 2, 'NORTHWEST')
+      end
+      it "should not be on the board" do
+        expect(@robot.on_board).to be false
+      end
+      it "should be report no placement" do
+        expect{@robot.report}.to output("I am not on the board yet Dave\n").to_stdout
+      end
+
+    end
+
   end    
 
 

@@ -6,11 +6,19 @@ class Robot
     @on_board = false
     @board = Board.new
     @directions = ['NORTH', 'EAST', 'SOUTH', 'WEST']
+    @x = nil
+    @y = nil
+    @facing = 'NORTH'
   end
 
   # place the robot on the board
   def place(x, y, facing)
-    @on_board = @board.is_within_board(x, y) && @directions.include?(facing)
+    if @board.is_within_board(x, y) && @directions.include?(facing)
+      @on_board = true
+      @x = x
+      @y = y
+      @facing = facing
+    end
   end
 
   # move the robot 1 space in its current direction
@@ -27,6 +35,11 @@ class Robot
 
   # announce the robots current coordinates and facing direction
   def report
+    if !@on_board
+      puts 'I am not on the board yet Dave'
+    else
+      puts "I am at #{@x}:#{@y}, facing #{@facing}"
+    end
   end
 
 end
