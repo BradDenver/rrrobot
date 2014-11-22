@@ -18,11 +18,39 @@ class Robot
       @x = x
       @y = y
       @facing = facing
+    else
+      puts "I'm sorry, Dave. I'm afraid I can't do that"
     end
   end
 
   # move the robot 1 space in its current direction
   def move
+    if !@on_board
+      puts 'I am not on the board yet Dave'
+      return
+    end
+    
+    @new_x = @x
+    @new_y = @y
+    
+    case @facing
+    when 'NORTH'
+      @new_y += 1
+    when 'EAST'
+      @new_x += 1
+    when 'SOUTH'
+      @new_y -= 1
+    when 'WEST'
+      @new_x -= 1
+    end
+
+    if @board.is_within_board(@new_x, @new_y)
+      @x = @new_x
+      @y = @new_y
+      puts "Moved to #{@x}:#{@y}"
+    else
+      puts "I'm sorry, Dave. I'm afraid I can't do that"
+    end
   end
 
   # rotate the robot 90 deg counter clockwise

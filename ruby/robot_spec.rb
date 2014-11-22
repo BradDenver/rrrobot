@@ -39,10 +39,28 @@ RSpec.describe Robot do
       it "should be report no placement" do
         expect{@robot.report}.to output("I am not on the board yet Dave\n").to_stdout
       end
-
     end
-
   end    
 
+  describe "#move" do
+    before :each do
+      @robot = Robot.new
+    end
+    context "when not yet placed" do
+      it "should ignore move" do
+        expect{@robot.move}.to output("I am not on the board yet Dave\n").to_stdout
+      end
+    end
+    context "when placed on board" do
+      it "should perform valid move" do
+        @robot.place(0, 0, 'NORTH')
+        expect{@robot.move}.to output("Moved to 0:1\n").to_stdout
+      end
+      it "should reject invalid move" do
+        @robot.place(0, 4, 'NORTH')
+        expect{@robot.move}.to output("I'm sorry, Dave. I'm afraid I can't do that\n").to_stdout
+      end
+    end
+  end
 
 end
