@@ -55,23 +55,20 @@ class Robot
 
   # rotate the robot 90 deg counter clockwise
   def left
-    if !@on_board
-      puts 'I am not on the board yet Dave'
-    else
-      current_direction_index = @directions.index(@facing)
-      new_direction_index = current_direction_index - 1
-      @facing = @directions[new_direction_index]
-      puts "Facing #{@facing}"
-    end
+    rotate(-1)
   end
 
   # rotate the robot 90 deg clockwise
   def right
+    rotate(1)
+  end
+
+  def rotate(amount)
     if !@on_board
       puts 'I am not on the board yet Dave'
     else
       current_direction_index = @directions.index(@facing)
-      new_direction_index = current_direction_index + 1
+      new_direction_index = current_direction_index + amount
       if new_direction_index.nil?
         # return to start of directions list
         new_direction_index = 0
@@ -79,7 +76,6 @@ class Robot
       @facing = @directions[new_direction_index]
       puts "Facing #{@facing}"
     end
-
   end
 
   # announce the robots current coordinates and facing direction
