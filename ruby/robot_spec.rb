@@ -98,3 +98,4 @@ RSpec.describe Robot do
   end
 
 end
+

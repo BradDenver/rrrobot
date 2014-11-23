@@ -1,3 +1,5 @@
+require_relative './board.rb'
+
 class Robot
   attr_reader :on_board
 
@@ -69,7 +71,7 @@ class Robot
     else
       current_direction_index = @directions.index(@facing)
       new_direction_index = current_direction_index + amount
-      if new_direction_index.nil?
+      if new_direction_index >= @directions.length
         # return to start of directions list
         new_direction_index = 0
       end
@@ -88,3 +90,4 @@ class Robot
   end
 
 end
+
