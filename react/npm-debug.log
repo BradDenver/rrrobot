@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'react-tools' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'react-tools', null ]
+5 verbose cache add name=undefined spec="react-tools" args=["react-tools",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'react-tools',
+6 verbose parsed url   path: 'react-tools',
+6 verbose parsed url   href: 'react-tools' }
+7 silly lockFile 0f761efe-react-tools react-tools
+8 verbose lock react-tools /Users/braddenver/.npm/0f761efe-react-tools.lock
+9 silly lockFile 0f761efe-react-tools react-tools
+10 silly lockFile 0f761efe-react-tools react-tools
+11 verbose addNamed [ 'react-tools', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 47fcd5e0-react-tools react-tools@
+14 verbose lock react-tools@ /Users/braddenver/.npm/47fcd5e0-react-tools.lock
+15 silly addNameRange { name: 'react-tools', range: '*', hasData: false }
+16 verbose request where is /react-tools
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id f6fbbf67661b7daf
+19 verbose url raw /react-tools
+20 verbose url resolving [ 'https://registry.npmjs.org/', './react-tools' ]
+21 verbose url resolved https://registry.npmjs.org/react-tools
+22 verbose request where is https://registry.npmjs.org/react-tools
+23 info trying registry request attempt 1 at 21:04:10
+24 verbose etag "CHNCVY1VLUQ4CPJ6NW1EZA2WX"
+25 http GET https://registry.npmjs.org/react-tools
+26 http 200 https://registry.npmjs.org/react-tools
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Sun, 23 Nov 2014 10:04:11 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"A5AYGC1VZ76Q8YVSBADXEI53T"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '43679',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-syd1622-SYD',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1416737051.084719,VS0,VE769',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'react-tools', range: '*', hasData: true }
+29 silly addNameRange versions [ 'react-tools',
+29 silly addNameRange   [ '0.3.0',
+29 silly addNameRange     '0.3.1',
+29 silly addNameRange     '0.3.2',
+29 silly addNameRange     '0.3.3',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.5.1',
+29 silly addNameRange     '0.4.2',
+29 silly addNameRange     '0.5.2',
+29 silly addNameRange     '0.8.0',
+29 silly addNameRange     '0.9.0-rc1',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '0.10.0-rc1',
+29 silly addNameRange     '0.10.0',
+29 silly addNameRange     '0.11.0-rc1',
+29 silly addNameRange     '0.11.0',
+29 silly addNameRange     '0.11.1',
+29 silly addNameRange     '0.11.2',
+29 silly addNameRange     '0.12.0-rc1',
+29 silly addNameRange     '0.12.0',
+29 silly addNameRange     '0.12.1' ] ]
+30 verbose addNamed [ 'react-tools', '0.12.1' ]
+31 verbose addNamed [ '0.12.1', '0.12.1' ]
+32 silly lockFile a591857b-react-tools-0-12-1 react-tools@0.12.1
+33 verbose lock react-tools@0.12.1 /Users/braddenver/.npm/a591857b-react-tools-0-12-1.lock
+34 silly lockFile 3810a535-act-tools-react-tools-0-12-1-tgz https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+35 verbose lock https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz /Users/braddenver/.npm/3810a535-act-tools-react-tools-0-12-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz',
+36 verbose addRemoteTarball   'cd016e2f1b80d35a6006100305c068925e25e3d2' ]
+37 info retry fetch attempt 1 at 21:04:11
+38 verbose fetch to= /var/folders/w4/yjthmmdd4bl9q20w98cc7mnw0000gn/T/npm-11955-YwJrNPB1/registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+39 http GET https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+40 http 200 https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+41 silly lockFile 3810a535-act-tools-react-tools-0-12-1-tgz https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+42 silly lockFile 3810a535-act-tools-react-tools-0-12-1-tgz https://registry.npmjs.org/react-tools/-/react-tools-0.12.1.tgz
+43 silly lockFile a591857b-react-tools-0-12-1 react-tools@0.12.1
+44 silly lockFile a591857b-react-tools-0-12-1 react-tools@0.12.1
+45 silly lockFile 47fcd5e0-react-tools react-tools@
+46 silly lockFile 47fcd5e0-react-tools react-tools@
+47 error Error: EACCES, mkdir '/Users/braddenver/.npm/react-tools/0.12.1'
+47 error  { [Error: EACCES, mkdir '/Users/braddenver/.npm/react-tools/0.12.1']
+47 error   errno: 3,
+47 error   code: 'EACCES',
+47 error   path: '/Users/braddenver/.npm/react-tools/0.12.1' }
+48 error Please try running this command again as root/Administrator.
+49 error System Darwin 14.0.0
+50 error command "node" "/usr/local/bin/npm" "install" "-g" "react-tools"
+51 error cwd /Applications/MAMP/htdocs/rrrobot/react
+52 error node -v v0.10.32
+53 error npm -v 1.4.28
+54 error path /Users/braddenver/.npm/react-tools/0.12.1
+55 error code EACCES
+56 error errno 3
+57 error stack Error: EACCES, mkdir '/Users/braddenver/.npm/react-tools/0.12.1'
+58 verbose exit [ 3, true ]
