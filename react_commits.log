@@ -1,0 +1,47 @@
+commit 3d7faa2b056d8d8637c6e77bc40f6c3b0f9cf4f9
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 14:45:17 2014 +1100
+
+    updated instructions
+
+commit 736d721d84d936ef62807ef3b56504d505722ead
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 14:35:42 2014 +1100
+
+    we have movement. Implemented move feature
+
+commit 1ae99d6ef2a93b386145b4fd468ecee2935dd707
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 14:19:56 2014 +1100
+
+    implemented left and right features
+
+commit 351ac7b005511a89bceb2efaa7a19c0f5696c528
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 13:30:07 2014 +1100
+
+    robot can now be placed by clicking board, facing var is defaulted to north
+
+commit 8bf9e49b1fa8801872870dfc768f357a59fbecd7
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 13:02:12 2014 +1100
+
+    robot state now save in board
+
+commit b7ff4b600795b69fd5cee910fc72668010857b23
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 12:48:21 2014 +1100
+
+    the board can now render a robot via cell children
+
+commit 511a38a416e57a07a4b5f5809ff27282b775b092
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Mon Nov 24 09:08:23 2014 +1100
+
+    created the basic shell for the react robot app
+
+commit c9d16678e3cbac4f43f34bb5ec33c3b0f1dda38d
+Author: Brad Denver <brad.denver@gmail.com>
+Date:   Sun Nov 23 20:53:27 2014 +1100
+
+    react vesion scaffolding
