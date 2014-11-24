@@ -23,7 +23,11 @@ var Board = React.createClass({
     for(r=this.props.gridSize-1; r>=0; r--) {
       var cols = [];
       for(c=0; c<this.props.gridSize; c++) {
-        cols.push(<Cell key={c+'.'+r} x={c} y={r} >{ c===0 && r===0 ? <Robot facing={this.state.robotFacing} /> : '' }</Cell>);
+        cols.push(
+          <Cell key={c+'.'+r} x={c} y={r} placeRobot={this.placeRobot} >
+            { c===this.state.robotX && r===this.state.robotY ? <Robot facing={this.state.robotFacing} /> : '' }
+          </Cell>
+        );
       }
       rows.push(<div className="row" key={r}>{cols}</div>);
     }
@@ -44,5 +48,13 @@ var Board = React.createClass({
         </div>
       </div>
     );
+  },
+
+  placeRobot: function(x, y) {
+    this.setState({
+      robotX: x,
+      robotY: y,
+      robotOnBoard: true
+    });
   }
 });

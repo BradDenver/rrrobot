@@ -1,7 +1,8 @@
 var Cell = React.createClass({
   propTypes: {
     x: React.PropTypes.number.isRequired,
-    y: React.PropTypes.number.isRequired
+    y: React.PropTypes.number.isRequired,
+    placeRobot: React.PropTypes.func.isRequired
   },
 
   cellStyle: {
@@ -12,7 +13,13 @@ var Cell = React.createClass({
   
   render: function() {
     return (
-      <div className="col-xs-2 text-muted" style={this.cellStyle}>{this.props.x}.{this.props.y}{this.props.children}</div>
+      <div className="col-xs-2 text-muted" style={this.cellStyle} onClick={this._onClickHandler}>
+        {this.props.x}.{this.props.y}{this.props.children}
+      </div>
     );
+  },
+
+  _onClickHandler: function() {
+    this.props.placeRobot(this.props.x, this.props.y);
   }
 });
