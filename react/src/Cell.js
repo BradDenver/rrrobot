@@ -1,5 +1,9 @@
 var Cell = React.createClass({
-  
+  propTypes: {
+    x: React.PropTypes.number.isRequired,
+    y: React.PropTypes.number.isRequired
+  },
+
   cellStyle: {
     backgroundColor: '#eee',
     border: '1px solid #ccc',
@@ -8,7 +12,7 @@ var Cell = React.createClass({
   
   render: function() {
     return (
-      <div className="col-xs-2" style={this.cellStyle}>0</div>
+      <div className="col-xs-2 text-muted" style={this.cellStyle}>{this.props.x}.{this.props.y}{this.props.children}</div>
     );
   }
 });

@@ -1,43 +1,28 @@
 var Board = React.createClass({
+  propTypes: {
+    gridSize: React.PropTypes.number.isRequired
+  },
+
+  getDefaultProps: function() {
+    return {
+      gridSize: 5
+    };
+  },
+  
   render: function() {
+    var rows = [];
+    for(r=this.props.gridSize-1; r>=0; r--) {
+      var cols = [];
+      for(c=0; c<this.props.gridSize; c++) {
+        cols.push(<Cell key={c+'.'+r} x={c} y={r} >{ c===0 && r===0 ? <Robot/> : '' }</Cell>);
+      }
+      rows.push(<div className="row" key={r}>{cols}</div>);
+    }
+    
     return (
       <div className="container">
         <h1>React RRRobot</h1>
-        <div className="row">
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-        </div>
-        <div className="row">
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-        </div>
-        <div className="row">
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-        </div>
-        <div className="row">
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-        </div>
-        <div className="row">
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-         <Cell /> 
-        </div>
+        {rows}
         <div className="row" style={{margin: '2em 0'}}>
           <div className="btn-group" role="group">
             <button type="button" className="btn btn-default">Left</button>

@@ -1,0 +1,32 @@
+var directions = ['NORTH', 'EAST', 'SOUTH', 'WEST'],
+  direction_icons = {
+    'NORTH': 'up',
+    'EAST': 'right',
+    'SOUTH': 'down',
+    'WEST': 'left'
+  };
+
+var Robot = React.createClass({
+  propTypes: {
+    x: React.PropTypes.number.isRequired,
+    y: React.PropTypes.number.isRequired
+  },
+
+  getDefaultProps: function() {
+    return {
+      facing: 'NORTH'
+    };
+  },
+
+  style: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  },
+  
+  render: function() {
+    return (
+      <span className={'glyphicon glyphicon-chevron-'+direction_icons[this.props.facing]} style={this.style}></span>
+    );
+  }
+});
