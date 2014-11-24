@@ -42,7 +42,7 @@ var Board = React.createClass({
         <div className="row" style={{margin: '2em 0'}}>
           <div className="btn-group" role="group">
             <button type="button" className="btn btn-default" onClick={this.left}>Left</button>
-            <button type="button" className="btn btn-default">Move</button>
+            <button type="button" className="btn btn-default" onClick={this.move}>Move</button>
             <button type="button" className="btn btn-default" onClick={this.right}>Right</button>
           </div>
         </div>
@@ -89,6 +89,40 @@ var Board = React.createClass({
         robotFacing: directions[new_direction_index],
         error: null
       });
+    }
+  },
+
+  move: function() {
+    if(!this.state.robotOnBoard) {
+      this.setState({error: 'I am not on the board yet Dave'});
+    } else {
+      var newX = this.state.robotX,
+      newY = this.state.robotY;
+
+      switch(this.state.robotFacing) {
+        case 'NORTH':
+          newY++;
+        break
+        case 'EAST':
+          newX++;
+        break
+        case 'SOUTH':
+          newY--;
+        break
+        case 'WEST':
+          newX--;
+        break;
+      }
+    
+      if(newX >= 0 && newX < this.props.gridSize && newY >= 0 && newY < this.props.gridSize) {
+        this.setState({
+          robotX: newX,
+          robotY: newY,
+          error: null
+        });
+      } else {
+        this.setState({error: "I'm sorry, Dave. I'm afraid I can't do that"});
+      }
     }
   }
 
