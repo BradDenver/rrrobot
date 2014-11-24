@@ -9,13 +9,8 @@ var directions = ['NORTH', 'EAST', 'SOUTH', 'WEST'],
 var Robot = React.createClass({
   propTypes: {
     x: React.PropTypes.number.isRequired,
-    y: React.PropTypes.number.isRequired
-  },
-
-  getDefaultProps: function() {
-    return {
-      facing: 'NORTH'
-    };
+    y: React.PropTypes.number.isRequired,
+    facing: React.PropTypes.string.isRequired
   },
 
   style: {

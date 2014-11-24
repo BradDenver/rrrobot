@@ -5,8 +5,17 @@ var Board = React.createClass({
 
   getDefaultProps: function() {
     return {
-      gridSize: 5
+      gridSize: 5,
     };
+  },
+
+  getInitialState: function() {
+    return {
+      robotOnBoard: false,
+      robotX: null,
+      robotY: null,
+      robotFacing: 'NORTH'
+    }
   },
   
   render: function() {
@@ -14,7 +23,7 @@ var Board = React.createClass({
     for(r=this.props.gridSize-1; r>=0; r--) {
       var cols = [];
       for(c=0; c<this.props.gridSize; c++) {
-        cols.push(<Cell key={c+'.'+r} x={c} y={r} >{ c===0 && r===0 ? <Robot/> : '' }</Cell>);
+        cols.push(<Cell key={c+'.'+r} x={c} y={r} >{ c===0 && r===0 ? <Robot facing={this.state.robotFacing} /> : '' }</Cell>);
       }
       rows.push(<div className="row" key={r}>{cols}</div>);
     }
